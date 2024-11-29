@@ -14,7 +14,7 @@ mkdir /app
  npm install
 
 dnf install mongodb-org-shell -y
-mongo --host MONGODB-SERVER-IPADDRESS </app/schema/user.js
+mongo --host mongodb.hmtechops.in </app/schema/user.js
 
 systemctl daemon-reload
 systemctl enable user
