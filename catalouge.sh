@@ -16,6 +16,6 @@ mkdir /app
 dnf install mongodb-org-shell -y
 mongo --host mongodb.hmtechops.in </app/schema/catalogue.js
 
-systemctl daemon-reload
-systemctl enable catalogue
-systemctl restart catalogue
+sudo systemctl daemon-reload
+sudo systemctl enable catalogue
+sudo systemctl restart catalogue
