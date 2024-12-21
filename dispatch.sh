@@ -11,6 +11,6 @@ go mod init dispatch
 go get
 go build
 
-systemctl daemon-reload
-systemctl enable dispatch
-systemctl restart dispatch
+sudo systemctl daemon-reload
+sudo systemctl enable dispatch
+sudo systemctl restart dispatch

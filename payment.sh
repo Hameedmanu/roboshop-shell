@@ -9,6 +9,6 @@ unzip /tmp/payment.zip
 cd /app
 pip3.6 install -r requirements.txt
 
-systemctl daemon-reload
-systemctl enable payment
-systemctl restart payment
+sudo systemctl daemon-reload
+sudo systemctl enable payment
+sudo systemctl restart payment

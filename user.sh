@@ -16,6 +16,6 @@ mkdir /app
 dnf install mongodb-org-shell -y
 mongo --host mongodb.hmtechops.in </app/schema/user.js
 
-systemctl daemon-reload
-systemctl enable user
-systemctl restart user
+sudo systemctl daemon-reload
+sudo systemctl enable user
+sudo systemctl restart user
