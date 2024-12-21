@@ -12,7 +12,6 @@ mkdir /app
  cd /app
  npm install
 
-
-systemctl daemon-reload
-systemctl enable cart
-systemctl restart cart
+sudo systemctl daemon-reload
+sudo systemctl enable cart
+sudo systemctl restart cart
