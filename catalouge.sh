@@ -37,13 +37,13 @@ cd /app
 echo -e "\e[33m>>>>>>>>>>  Download NodeJS Dependencies <<<<<<<<<<\e[0m"
 npm install  &>>/tmp/roboshop.log
 
-echo -e "\e[33m>>>>>>>>>> Install MongoDB client  <<<<<<<<<<\e[0m"
+echo -e "\e[33m>>>>>>>>>> Install MongoDB client  <<<<<<<<<<\e[0m"   | tee -a /tmp/roboshop.log
 dnf install mongodb-org-shell -y  &>>/tmp/roboshop.log
 
-echo -e "\e[33m>>>>>>>>>>  Load Catalouge Schema <<<<<<<<<<\e[0m"
+echo -e "\e[33m>>>>>>>>>>  Load Catalouge Schema <<<<<<<<<<\e[0m"   | tee -a /tmp/roboshop.log
 mongo --host mongodb.hmtechops.in </app/schema/catalogue.js  &>>/tmp/roboshop.log
 
-echo -e "\e[33m>>>>>>>>>> Start Catalouge Service <<<<<<<<<<\e[0m"
-sudo systemctl daemon-reload  &>>/tmp/roboshop.log
-sudo systemctl enable catalogue  &>>/tmp/roboshop.log
-sudo systemctl restart catalogue &>>/tmp/roboshop.log
+echo -e "\e[33m>>>>>>>>>> Start Catalouge Service <<<<<<<<<<\e[0m"   | tee -a /tmp/roboshop.log
+systemctl daemon-reload  &>>/tmp/roboshop.log
+systemctl enable catalogue  &>>/tmp/roboshop.log
+systemctl restart catalogue &>>/tmp/roboshop.log
