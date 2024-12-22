@@ -44,6 +44,6 @@ echo -e "\e[33m>>>>>>>>>>  Load Catalouge Schema <<<<<<<<<<\e[0m"
 mongo --host mongodb.hmtechops.in </app/schema/catalogue.js
 
 echo -e "\e[33m>>>>>>>>>> Start Catalouge Service <<<<<<<<<<\e[0m"
-systemctl daemon-reload
-systemctl enable catalogue
-systemctl restart catalogue
+sudo systemctl daemon-reload
+sudo systemctl enable catalogue
+sudo systemctl restart catalogue
