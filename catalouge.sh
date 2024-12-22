@@ -19,6 +19,7 @@ dnf install nodejs -y
 echo -e "\e[33m>>>>>>>>>>  Create Application User <<<<<<<<<<\e[0m"
 useradd roboshop
 
+
 echo -e "\e[33m>>>>>>>>>>  Remove Application Directory <<<<<<<<<<\e[0m"
 rm -rf /app
 
