@@ -1,4 +1,4 @@
-log=${log}
+log=/tmp/roboshop.log
 
 echo -e "\e[33m>>>>>>>>>>  Create Catalouge Service <<<<<<<<<<\e[0m"
 cp catalouge.service /etc/systemd/system/catalouge.service &>>${log}
