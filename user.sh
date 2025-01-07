@@ -1,6 +1,6 @@
 log=/tmp/roboshop.log
 
-echo -e "\e[33m>>>>>>>>>>  Create user Service <<<<<<<<<<\e[0m"
+echo -e "\e[33m>>>>>>>>>>  Create User Service <<<<<<<<<<\e[0m"
 cp user.service /etc/systemd/system/user.service &>>${log}
 
 echo -e "\e[33m>>>>>>>>>>  Create MongoDB Repo <<<<<<<<<<\e[0m"
