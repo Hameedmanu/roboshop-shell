@@ -34,7 +34,7 @@ nodejs() {
 
     echo -e "\e[33m>>>>>>>>>>  Extract Application content <<<<<<<<<<\e[0m"
     cd /app
-    unzip /tmp/user.zip  &>>${log}
+    unzip /tmp/${component}.zip  &>>${log}
     cd /app
 
     echo -e "\e[33m>>>>>>>>>>  Download NodeJS Dependencies <<<<<<<<<<\e[0m"
