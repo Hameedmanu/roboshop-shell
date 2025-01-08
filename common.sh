@@ -1,7 +1,7 @@
 nodejs() {
- log=/tmp/roboshop.log
+  log=/tmp/roboshop.log
 
-    echo -e "\e[33m>>>>>>>>>>  Create User Service <<<<<<<<<<\e[0m"
+    echo -e "\e[33m>>>>>>>>>>  Create ${component} Service <<<<<<<<<<\e[0m"
     cp ${component}.service /etc/systemd/system/${component}.service &>>${log}
 
     echo -e "\e[33m>>>>>>>>>>  Create MongoDB Repo <<<<<<<<<<\e[0m"
@@ -50,5 +50,4 @@ nodejs() {
     systemctl daemon-reload  &>>${log}
     systemctl enable ${component}  &>>${log}
     systemctl restart ${component} &>>${log}
-
 }
