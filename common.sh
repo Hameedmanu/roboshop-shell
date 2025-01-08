@@ -43,7 +43,7 @@ nodejs() {
     echo -e "\e[33m>>>>>>>>>> Install MongoDB client  <<<<<<<<<<\e[0m"   | tee -a ${log}
     dnf install mongodb-org-shell -y  &>>${log}
 
-    echo -e "\e[33m>>>>>>>>>>  Load user Schema <<<<<<<<<<\e[0m"   | tee -a ${log}
+    echo -e "\e[33m>>>>>>>>>>  Load ${component} Schema <<<<<<<<<<\e[0m"   | tee -a ${log}
     mongo --host mongodb.hmtechops.in </app/schema/${component}.js  &>>${log}
 
     echo -e "\e[33m>>>>>>>>>> Start ${component} Service <<<<<<<<<<\e[0m"   | tee -a ${log}
