@@ -44,7 +44,7 @@ nodejs() {
     dnf install mongodb-org-shell -y  &>>${log}
 
     echo -e "\e[33m>>>>>>>>>>  Load user Schema <<<<<<<<<<\e[0m"   | tee -a ${log}
-    mongo --host mongodb.hmtechops.in </app/schema/${component}.js  &>>${log}
+    mongo --host mongodb.hmtechops.in </app/schema/{component}.js  &>>${log}
 
     echo -e "\e[33m>>>>>>>>>> Start user Service <<<<<<<<<<\e[0m"   | tee -a ${log}
     systemctl daemon-reload  &>>${log}
