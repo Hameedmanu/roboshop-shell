@@ -23,7 +23,7 @@ func_systemd() {
   echo -e "\e[33m>>>>>>>>>> Start ${component} Service <<<<<<<<<<\e[0m"   | tee -a ${log}
   sudo systemctl daemon-reload  &>>${log}
   sudo systemctl enable ${component}  &>>${log}
-  sudo systemctl restart ${component} &>>${log}
+  sudo systemctl start ${component} &>>${log}
 
 }
 
