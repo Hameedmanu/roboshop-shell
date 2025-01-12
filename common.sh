@@ -72,7 +72,7 @@ func_java() {
     func_apppreq
 
     echo -e "\e[33m>>>>>>>>>>  Build ${component} Service <<<<<<<<<<\e[0m"
-    mvn clean package
+    mvn clean package &>>${log}
     mv target/${component}-1.0.jar ${component}.jar &>>${log}
 
     echo -e "\e[33m>>>>>>>>>>  Install MySQL Client <<<<<<<<<<\e[0m"
