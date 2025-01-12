@@ -65,16 +65,16 @@ func_java() {
     cp ${component}.service /etc/systemd/system/${component}.service
 
     echo -e "\e[33m>>>>>>>>>>  Install Maven <<<<<<<<<<\e[0m"
-    dnf install maven -y
+    dnf install maven -y &>>${log}
 
     func_apppreq
 
     echo -e "\e[33m>>>>>>>>>>  Build ${component} Service <<<<<<<<<<\e[0m"
     mvn clean package
-    mv target/${component}-1.0.jar ${component}.jar
+    mv target/${component}-1.0.jar ${component}.jar &>>${log}
 
     echo -e "\e[33m>>>>>>>>>>  Install MySQL Client <<<<<<<<<<\e[0m"
-    dnf install mysql -y
+    dnf install mysql -y &>>${log}
 
     echo -e "\e[33m>>>>>>>>>>  Load Schema <<<<<<<<<<\e[0m"
     mysql -h mysql.hmtechops.in -uroot -pRoboShop@1 < /app/schema/${component}.sql
