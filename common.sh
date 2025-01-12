@@ -87,12 +87,12 @@ func_java() {
 func_python() {
 
     echo -e "\e[33m>>>>>>>>>>  Build ${component} Service <<<<<<<<<<\e[0m"
-    dnf install python36 gcc python3-devel -y
+    dnf install python36 gcc python3-devel -y &>>${log}
 
     func_apppreq
 
     echo -e "\e[33m>>>>>>>>>>  Install ${component} Service <<<<<<<<<<\e[0m"
-    pip3.6 install -r requirements.txt
+    pip3.6 install -r requirements.txt -y &>>${log}
 
     func_systemd
 
