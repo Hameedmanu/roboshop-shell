@@ -1,3 +1,5 @@
+log=/tmp/roboshop.log
+
 func_apppreq() {
   echo -e "\e[33m>>>>>>>>>>  Create Application User <<<<<<<<<<\e[0m"
   useradd roboshop  &>>${log}
@@ -62,7 +64,7 @@ func_nodejs() {
 
 func_java() {
     echo -e "\e[33m>>>>>>>>>>  Create ${component} Service <<<<<<<<<<\e[0m"
-    cp ${component}.service /etc/systemd/system/${component}.service
+    cp ${component}.service /etc/systemd/system/${component}.service  &>>${log}
 
     echo -e "\e[33m>>>>>>>>>>  Install Maven <<<<<<<<<<\e[0m"
     dnf install maven -y &>>${log}
@@ -77,7 +79,7 @@ func_java() {
     dnf install mysql -y &>>${log}
 
     echo -e "\e[33m>>>>>>>>>>  Load Schema <<<<<<<<<<\e[0m"
-    mysql -h mysql.hmtechops.in -uroot -pRoboShop@1 < /app/schema/${component}.sql
+    mysql -h mysql.hmtechops.in -uroot -pRoboShop@1 < /app/schema/${component}.sql &>>${log}
 
     func_systemd
 }
