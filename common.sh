@@ -63,7 +63,7 @@ func_nodejs() {
     func_systemd
 }
 
-func_java() {
+func_java()
 
 
     echo -e "\e[33m>>>>>>>>>>  Install Maven <<<<<<<<<<\e[0m"
