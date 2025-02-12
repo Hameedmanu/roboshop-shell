@@ -1,6 +1,5 @@
 log=/tmp/roboshop.log
 
-
 func_apppreq() {
   echo -e "\e[33m>>>>>>>>>>  Create ${component} Service <<<<<<<<<<\e[0m"
   cp ${component}.service /etc/systemd/system/${component}.service  &>>${log}
