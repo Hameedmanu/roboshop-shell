@@ -1,4 +1,4 @@
-log=/tmp/roboshop.log
+log=/tmp/roboshop.lo
 
 func_apppreq() {
   echo -e "\e[33m>>>>>>>>>>  Create ${component} Service <<<<<<<<<<\e[0m"
