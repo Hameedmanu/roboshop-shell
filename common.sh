@@ -31,7 +31,7 @@ func_systemd() {
 
 }
 
-func_nodejs()
+func_nodejs() {
   log=/tmp/roboshop.log
 
     echo -e "\e[33m>>>>>>>>>>  Create MongoDB Repo <<<<<<<<<<\e[0m"
