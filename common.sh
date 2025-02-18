@@ -95,3 +95,5 @@ func_python() {
     pip3.6 install -r requirements.txt -y &>>${log}
 
     func_systemd
+
+}
