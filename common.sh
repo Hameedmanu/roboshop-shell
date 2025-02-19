@@ -84,7 +84,7 @@ func_java() {
     func_systemd
 }
 
-func_python() {
+func_python()
 
     echo -e "\e[33m>>>>>>>>>>  Build ${component} Service <<<<<<<<<<\e[0m"
     dnf install python36 gcc python3-devel -y &>>${log}
