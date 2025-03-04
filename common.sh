@@ -67,7 +67,7 @@ func_java() {
 
 
     echo -e "\e[33m>>>>>>>>>>  Install Maven <<<<<<<<<<\e[0m"
-
+    dnf install maven -y &>>${log}
 
     func_apppreq
 
