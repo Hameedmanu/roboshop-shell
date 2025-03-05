@@ -9,4 +9,3 @@ ExecStart=/bin/node /app/server.js
 SyslogIdentifier=catalogue
 
 [Install]
-WantedBy=multi-user.target
