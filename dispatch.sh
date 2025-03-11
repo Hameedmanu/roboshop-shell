@@ -13,4 +13,4 @@ go build
 
 sudo systemctl daemon-reload
 sudo systemctl enable dispatch
-sudo systemctl restart dispatc
+sudo systemctl restart dispatch
