@@ -14,4 +14,4 @@ mkdir /app
 
 sudo systemctl daemon-reload
 sudo systemctl enable cart
-sudo systemctl restart cart
+sudo systemctl restart car
