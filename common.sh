@@ -79,7 +79,7 @@ func_java() {
     dnf install mysql -y &>>${log}
 
     echo -e "\e[33m>>>>>>>>>>  Load Schema <<<<<<<<<<\e[0m"
-    mysql -h mysql.hmtechops.in -uroot -pRoboShop@1 < /app/schema/${component}.sql &>>${log
+    mysql -h mysql.hmtechops.in -uroot -pRoboShop@1 < /app/schema/${component}.sql &>>${log}
 
     func_systemd
 }
