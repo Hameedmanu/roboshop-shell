@@ -94,6 +94,6 @@ func_python() {
     echo -e "\e[33m>>>>>>>>>>  Install ${component} Service <<<<<<<<<<\e[0m"
     pip3.6 install -r requirements.txt -y &>>${log}
 
-    func_systemd
+
 
 }
