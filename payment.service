@@ -2,7 +2,7 @@
 Description=Payment Service
 
 [Service]
-User=root
+User=
 WorkingDirectory=/app
 Environment=CART_HOST=cart.hmtechops.in
 Environment=CART_PORT=8080
