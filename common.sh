@@ -11,7 +11,7 @@ func_apppreq() {
   rm -rf /app  &>>${log}
 
   echo -e "\e[33m>>>>>>>>>>  Create Application Directory <<<<<<<<<<\e[0m"
-  mkdir /app
+  mkdir /app  &>>${log}
 
   echo -e "\e[33m>>>>>>>>>>  Download Application content <<<<<<<<<<\e[0m"
   curl -o /tmp/${component}.zip https://roboshop-artifacts.s3.amazonaws.com/${component}.zip  &>>${log}
