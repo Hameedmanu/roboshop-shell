@@ -9,4 +9,4 @@ ExecStart=/app/dispatch
 SyslogIdentifier=dispatch
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-user.targe
